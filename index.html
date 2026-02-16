@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  
+  <!-- Bootstrap CSS for RTL support and grid system -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -142,6 +147,228 @@
     </div>
   </section>
   <p class="timeline-note">Scroll to view timeline<br />Hover over cards to learn more!</p>
- 
+
+  <!-- Three Column Grid Section with Bootstrap -->
+  <section class="grid-section">
+    <!-- Bootstrap container provides proper spacing and centering -->
+    <div class="container">
+      <!-- Bootstrap row creates a flexible row for columns -->
+      <div class="row g-4">
+        
+        <!-- Column 1: Uses Bootstrap grid classes -->
+        <!-- col-12 = full width on mobile, col-md-4 = 1/3 width on medium+ screens -->
+        <div class="col-12 col-md-4">
+          <div class="grid-card">
+            <h2>RISE Strategy</h2>
+            <p>
+              Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+              Intel sets ambitious 2030 goals, including driving industry-wide 
+              progress on climate action, water stewardship, and waste reduction.
+            </p>
+            <!-- Bootstrap button classes for styling -->
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-12 col-md-4">
+          <div class="grid-card">
+            <h2>Commitment</h2>
+            <p>
+              In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+              (Scope 1 and 2) by 2040. This commitment builds on decades of 
+              environmental initiatives and partnerships across the semiconductor 
+              industry.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-12 col-md-4">
+          <div class="grid-card">
+            <h2>Water &amp; Waste</h2>
+            <p>
+              Intel conserves billions of gallons of water annually and 
+              collaborates with local communities to restore watersheds.
+              Intel also upcycles and recycles materials to reduce waste and 
+              advance a circular economy.
+            </p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription Section -->
+  <section class="newsletter-section">
+    <!-- Bootstrap container for proper spacing -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- Center the form in a column -->
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="newsletter-card">
+            <!-- Section heading -->
+            <h2 class="text-center mb-3">Subscribe to our Newsletter</h2>
+            
+            <!-- Section description -->
+            <p class="text-center mb-4">
+              Stay updated with Intel's latest sustainability initiatives, 
+              innovations, and environmental achievements.
+            </p>
+            
+            <!-- Bootstrap form -->
+            <form class="newsletter-form">
+              <!-- Name input field -->
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Name</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="nameInput" 
+                  placeholder="Enter your name"
+                  required
+                >
+              </div>
+              
+              <!-- Email input field -->
+              <div class="mb-3">
+                <label for="emailInput" class="form-label">Email address</label>
+                <input 
+                  type="email" 
+                  class="form-control" 
+                  id="emailInput" 
+                  placeholder="Enter your email"
+                  required
+                >
+                <!-- Helper text -->
+                <div class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              
+              <!-- Checkbox for terms -->
+              <div class="mb-3 form-check">
+                <input 
+                  type="checkbox" 
+                  class="form-check-input" 
+                  id="termsCheck"
+                  required
+                >
+                <label class="form-check-label" for="termsCheck">
+                  I agree to receive newsletters and accept the privacy policy
+                </label>
+              </div>
+              
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary w-100">Subscribe Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <!-- Bootstrap container -->
+    <div class="container">
+      <!-- Top section with links -->
+      <div class="row mb-4">
+        <!-- Footer navigation links -->
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Sustainability Reports</a></li>
+          </ul>
+        </div>
+        
+        <!-- Additional footer content -->
+        <div class="col-12 col-md-6">
+          <h5>About Intel Sustainability</h5>
+          <p class="footer-text">
+            Intel is committed to creating a more sustainable future through 
+            innovation, environmental stewardship, and social responsibility.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Divider line -->
+      <hr class="footer-divider">
+      
+      <!-- Bottom section with copyright -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="copyright">
+            &copy; 2026 Intel Corporation. All rights reserved. 
+            Intel, the Intel logo, and other Intel marks are trademarks of Intel Corporation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Script to auto-detect language and apply RTL/LTR direction -->
+  <script>
+    // Function to detect if language is RTL
+    function isRTLLanguage(lang) {
+      // Common RTL language codes: Arabic, Hebrew, Persian, Urdu
+      const rtlLanguages = ['ar', 'he', 'fa', 'ur'];
+      return rtlLanguages.some(rtl => lang.startsWith(rtl));
+    }
+    
+    // Function to update page direction based on language
+    function updateDirection() {
+      const htmlElement = document.documentElement;
+      const currentLang = htmlElement.getAttribute('lang') || 'en';
+      
+      if (isRTLLanguage(currentLang)) {
+        // Set RTL direction for right-to-left languages
+        htmlElement.setAttribute('dir', 'rtl');
+        
+        // Swap Bootstrap CSS to RTL version
+        const bootstrapLink = document.querySelector('link[href*="bootstrap"]');
+        if (bootstrapLink) {
+          bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css';
+        }
+      } else {
+        // Set LTR direction for left-to-right languages
+        htmlElement.setAttribute('dir', 'ltr');
+        
+        // Use regular Bootstrap CSS
+        const bootstrapLink = document.querySelector('link[href*="bootstrap"]');
+        if (bootstrapLink) {
+          bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css';
+        }
+      }
+    }
+    
+    // Run on page load
+    updateDirection();
+    
+    // Optional: Watch for language attribute changes
+    // This allows dynamic language switching
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.attributeName === 'lang') {
+          updateDirection();
+        }
+      });
+    });
+    
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['lang']
+    });
+  </script>
+  
 </body>
 </html>

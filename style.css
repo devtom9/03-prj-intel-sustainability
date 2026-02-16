@@ -283,3 +283,440 @@ header p {
   }
 }
 
+/* ============================
+   Three Column Grid Section
+   ============================ */
+
+/* Grid section container styling */
+.grid-section {
+  /* Add padding for spacing around the section */
+  padding: 60px 20px;
+  
+  /* Light background color to separate from other sections */
+  background: #f5f7fb;
+}
+
+/* Individual grid card styling */
+.grid-card {
+  /* White background for each card */
+  background-color: #f9f9f9;
+  
+  /* Rounded corners for modern look */
+  border-radius: 8px;
+  
+  /* Inner padding for content */
+  padding: 30px;
+  
+  /* Full height to match sibling cards */
+  height: 100%;
+  
+  /* Flexbox to push button to bottom */
+  display: flex;
+  flex-direction: column;
+  
+  /* Subtle shadow for depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  
+  /* Smooth transition for hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for grid cards */
+.grid-card:hover {
+  /* Slight lift on hover */
+  transform: translateY(-5px);
+  
+  /* Enhanced shadow on hover */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Grid card heading styling */
+.grid-card h2 {
+  /* Intel blue color for headings */
+  color: #0071c5;
+  
+  /* Spacing below heading */
+  margin-bottom: 16px;
+  
+  /* Font size for card headings */
+  font-size: 1.5rem;
+  
+  /* Bold font weight */
+  font-weight: 600;
+}
+
+/* Grid card paragraph styling */
+.grid-card p {
+  /* Darker gray for readable text */
+  color: #333;
+  
+  /* Line height for readability */
+  line-height: 1.6;
+  
+  /* Spacing below paragraph */
+  margin-bottom: 20px;
+  
+  /* Allow paragraph to grow and push button down */
+  flex-grow: 1;
+}
+
+/* Button styling for grid cards */
+.grid-card .btn {
+  /* Intel blue background */
+  background-color: #0071c5;
+  
+  /* Border color matches background */
+  border-color: #0071c5;
+  
+  /* Rounded corners */
+  border-radius: 4px;
+  
+  /* Padding inside button */
+  padding: 10px 24px;
+  
+  /* Remove text decoration */
+  text-decoration: none;
+  
+  /* White text color */
+  color: #ffffff;
+  
+  /* Center text */
+  text-align: center;
+  
+  /* Display as inline block for proper sizing */
+  display: inline-block;
+  
+  /* Smooth transition for hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.grid-card .btn:hover {
+  /* Darker blue on hover */
+  background-color: #005a9e;
+  
+  /* Keep border color consistent */
+  border-color: #005a9e;
+  
+  /* Keep white text on hover */
+  color: #ffffff;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+  .grid-section {
+    /* Reduce padding on smaller screens */
+    padding: 40px 16px;
+  }
+  
+  .grid-card {
+    /* Reduce card padding on smaller screens */
+    padding: 24px;
+  }
+  
+  .grid-card h2 {
+    /* Slightly smaller heading on mobile */
+    font-size: 1.3rem;
+  }
+}
+
+/* ============================
+   Newsletter Subscription Section
+   ============================ */
+
+/* Newsletter section container */
+.newsletter-section {
+  /* Add padding for spacing */
+  padding: 80px 20px;
+  
+  /* Gradient background similar to header */
+  background: linear-gradient(135deg, #003d82 0%, #0071c5 100%);
+}
+
+/* Newsletter card styling */
+.newsletter-card {
+  /* White background for the form card */
+  background-color: #ffffff;
+  
+  /* Rounded corners */
+  border-radius: 12px;
+  
+  /* Inner padding */
+  padding: 40px;
+  
+  /* Shadow for depth */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Newsletter heading */
+.newsletter-card h2 {
+  /* Intel blue color */
+  color: #0071c5;
+  
+  /* Font size for heading */
+  font-size: 2rem;
+  
+  /* Bold weight */
+  font-weight: 600;
+  
+  /* Spacing below */
+  margin-bottom: 16px;
+}
+
+/* Newsletter description text */
+.newsletter-card p {
+  /* Gray color for description */
+  color: #666;
+  
+  /* Font size */
+  font-size: 1rem;
+  
+  /* Line height for readability */
+  line-height: 1.6;
+}
+
+/* Form label styling */
+.newsletter-form .form-label {
+  /* Darker text for labels */
+  color: #333;
+  
+  /* Font weight */
+  font-weight: 500;
+  
+  /* Spacing below label */
+  margin-bottom: 8px;
+}
+
+/* Form input styling */
+.newsletter-form .form-control {
+  /* Slightly larger input fields */
+  padding: 12px 16px;
+  
+  /* Border styling */
+  border: 1px solid #ddd;
+  
+  /* Rounded corners */
+  border-radius: 6px;
+  
+  /* Smooth transition for focus */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input focus state */
+.newsletter-form .form-control:focus {
+  /* Intel blue border on focus */
+  border-color: #0071c5;
+  
+  /* Blue shadow on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 113, 197, 0.25);
+}
+
+/* Helper text styling */
+.newsletter-form .form-text {
+  /* Smaller font for helper text */
+  font-size: 0.875rem;
+  
+  /* Gray color */
+  color: #666;
+}
+
+/* Checkbox styling */
+.newsletter-form .form-check-input {
+  /* Slightly larger checkbox */
+  width: 1.2rem;
+  height: 1.2rem;
+  
+  /* Align with label */
+  margin-top: 0.1rem;
+}
+
+/* Checkbox label */
+.newsletter-form .form-check-label {
+  /* Adjust spacing */
+  margin-left: 8px;
+  
+  /* Font size */
+  font-size: 0.95rem;
+  
+  /* Text color */
+  color: #333;
+}
+
+/* Submit button */
+.newsletter-form .btn-primary {
+  /* Intel blue background */
+  background-color: #0071c5;
+  
+  /* Border color */
+  border-color: #0071c5;
+  
+  /* Padding for button */
+  padding: 12px 24px;
+  
+  /* Font weight */
+  font-weight: 500;
+  
+  /* Font size */
+  font-size: 1rem;
+  
+  /* Smooth transition */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.newsletter-form .btn-primary:hover {
+  /* Darker blue on hover */
+  background-color: #005a9e;
+  
+  /* Border color */
+  border-color: #005a9e;
+  
+  /* Slight lift effect */
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments for newsletter */
+@media (max-width: 768px) {
+  .newsletter-section {
+    /* Less padding on mobile */
+    padding: 50px 16px;
+  }
+  
+  .newsletter-card {
+    /* Less padding on mobile */
+    padding: 30px 20px;
+  }
+  
+  .newsletter-card h2 {
+    /* Smaller heading on mobile */
+    font-size: 1.6rem;
+  }
+}
+
+/* ============================
+   Footer Section
+   ============================ */
+
+/* Footer container */
+.site-footer {
+  /* Dark background for footer */
+  background-color: #1a1a1a;
+  
+  /* White text color */
+  color: #ffffff;
+  
+  /* Padding for spacing */
+  padding: 50px 20px 30px;
+}
+
+/* Footer heading */
+.site-footer h5 {
+  /* White color for headings */
+  color: #ffffff;
+  
+  /* Font size */
+  font-size: 1.1rem;
+  
+  /* Font weight */
+  font-weight: 600;
+  
+  /* Spacing below */
+  margin-bottom: 20px;
+  
+  /* Letter spacing */
+  letter-spacing: 0.5px;
+}
+
+/* Footer links list */
+.footer-links {
+  /* Remove default list styling */
+  list-style: none;
+  
+  /* Remove default padding */
+  padding: 0;
+  
+  /* Remove default margin */
+  margin: 0;
+}
+
+/* Footer link items */
+.footer-links li {
+  /* Spacing between links */
+  margin-bottom: 12px;
+}
+
+/* Footer link styling */
+.footer-links a {
+  /* Light gray color */
+  color: #d0d0d0;
+  
+  /* Remove underline */
+  text-decoration: none;
+  
+  /* Smooth transition */
+  transition: color 0.3s ease;
+}
+
+/* Footer link hover effect */
+.footer-links a:hover {
+  /* Intel blue on hover */
+  color: #5fa8e8;
+  
+  /* Underline on hover */
+  text-decoration: underline;
+}
+
+/* Footer text content */
+.footer-text {
+  /* Light gray color */
+  color: #d0d0d0;
+  
+  /* Line height for readability */
+  line-height: 1.6;
+  
+  /* Font size */
+  font-size: 0.95rem;
+}
+
+/* Footer divider line */
+.footer-divider {
+  /* Dark gray border */
+  border-color: #444;
+  
+  /* Vertical spacing */
+  margin: 30px 0;
+}
+
+/* Copyright text */
+.copyright {
+  /* Light gray color */
+  color: #999;
+  
+  /* Smaller font */
+  font-size: 0.875rem;
+  
+  /* Line height */
+  line-height: 1.6;
+  
+  /* Remove bottom margin */
+  margin: 0;
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+  .site-footer {
+    /* Less padding on mobile */
+    padding: 40px 16px 20px;
+  }
+  
+  .site-footer h5 {
+    /* Smaller heading on mobile */
+    font-size: 1rem;
+  }
+  
+  .footer-divider {
+    /* Less vertical spacing on mobile */
+    margin: 20px 0;
+  }
+}
+
