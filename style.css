@@ -1,0 +1,285 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a calm, readable font for the entire page */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fb;
+  overflow-x: hidden;
+}
+
+/* Header / Hero Section */
+header {
+  /* Make header take up full viewport height on desktop */
+  height: 100vh;
+  height: 100svh;
+  
+  /* Use flexbox to center all content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  
+  /* Gradient background */
+  background: linear-gradient(135deg, #003d82 0%, #1a66b2 60%, #5fa8e8 100%);
+}
+
+/* Container inside header */
+header > div {
+  /* Center text content */
+  text-align: center;
+
+  /* Add some padding for breathing room */
+  padding: 20px;
+
+  /* Set max-width so text doesn't stretch too wide */
+  max-width: 600px;
+}
+
+/* Logo sizing */
+header img {
+  /* Set a reasonable size for the logo */
+  width: 200px;
+  height: auto;
+
+  /* Add some bottom margin for spacing */
+  margin-bottom: 30px;
+}
+
+/* Main heading */
+header h1 {
+  /* Large font size for main headline */
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  /* Display heading in all caps */
+  text-transform: uppercase;
+  /* Set text color to white */
+  color: white;
+}
+
+/* Add decorative line below the heading */
+header h1::after {
+  /* Create a small decorative line */
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: white;
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+/* Subheading / Description */
+header p {
+  /* Medium font size for description */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  /* Set text color to white */
+  color: white;
+}
+
+/* Tablet adjustments */
+@media (max-width: 900px) {
+  header {
+    height: 100svh;
+    padding: 24px 12px;
+  }
+
+  header img {
+    width: 170px;
+    margin-bottom: 22px;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
+
+/* Phone adjustments */
+@media (max-width: 600px) {
+  header {
+    height: 100svh;
+    padding: 32px 14px 40px;
+  }
+
+  header img {
+    width: 150px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header h1::after {
+    width: 60px;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Cards grid styles (4 per row, two rows when possible) */
+.timeline {
+  background: #f5f7fb;
+  padding: 32px 16px 48px;
+}
+
+.carousel {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards-track {
+  display: flex;
+  gap: 20px;
+  padding: 12px 12px 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-gutter: stable;
+  /* Hide scrollbar but keep scrolling */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  max-width: 100%;
+}
+
+.cards-track::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  /* Show exactly 4 cards in the visible area */
+  flex: 0 0 calc((100% - 60px) / 4);
+  /* Border around each card as requested */
+  border: 1px solid #d1d7e0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 18px;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(16,24,40,0.12);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  color: #0b3a63;
+  margin-bottom: 6px;
+}
+
+.card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #112b3c;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+/* Image inside card */
+.card-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 10px 0 0;
+  display: block;
+}
+
+/* Description overlaid to fill card on hover */
+.card-desc {
+  position: absolute;
+  inset: 0;
+  padding: 20px;
+  background: rgba(0,61,130,0.78); /* darker overlay for contrast */
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  transition: opacity 280ms ease-out, transform 280ms ease-out;
+  overflow: auto;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.card:hover .card-desc,
+.card:focus-within .card-desc {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+/* Keep underlying headings and image visually below the overlay */
+.card > :not(.card-desc) { position: relative; z-index: 1; }
+.card-desc { z-index: 2; }
+
+/* Note under the timeline */
+.timeline-note {
+  text-align: center;
+  margin: 12px 0 32px;
+  color: #2b3b45;
+  padding: 0 16px;
+  max-width: 100%;
+}
+
+/* Responsive: keep snap scrolling but show fewer cards on narrow viewports */
+@media (max-width: 1000px) {
+  .card { flex: 0 0 calc((100% - 40px) / 3); }
+}
+
+@media (max-width: 700px) {
+  .card { flex: 0 0 100%; }
+}
+
+/* Phones: stack cards vertically with vertical scroll snap */
+@media (max-width: 500px) {
+  header {
+    height: 100vh;
+  }
+
+  header > div {
+    width: 80%;
+    max-width: none;
+    padding: 16px;
+  }
+
+  .cards-track {
+    flex-direction: column;
+    overflow: visible;
+    scroll-snap-type: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-height: none;
+  }
+
+  .card {
+    flex: none;
+    width: 100%;
+    margin: 0;
+    min-height: 320px;
+  }
+
+  .card-img {
+    height: 140px;
+  }
+}
+
